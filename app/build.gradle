@@ -1,0 +1,224 @@
+plugins {
+    alias(libs.plugins.android.application)
+    alias(libs.plugins.kotlin.android)
+    id("kotlin-kapt")
+    id 'com.google.gms.google-services'
+    id 'org.jetbrains.dokka' version '1.8.10'
+}
+
+android {
+    namespace 'com.example.appnotas'
+    compileSdk 35
+
+    defaultConfig {
+        applicationId "com.example.appnotas"
+        minSdk 24
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildFeatures {
+        viewBinding true
+    }
+
+    signingConfigs {
+        release {
+            storeFile file("appnotas-key.jks")
+            storePassword System.getenv("KEYSTORE_PASSWORD") ?: project.property("KEYSTORE_PASSWORD")
+            keyAlias "appnotas-key"
+            keyPassword System.getenv("KEY_PASSWORD") ?: project.property("KEY_PASSWORD")
+        }
+    }
+
+    buildTypes {
+        release {
+            signingConfig signingConfigs.release
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            debuggable false
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    testOptions {
+        unitTests {
+            includeAndroidResources = true
+            all {
+                testLogging {
+                    events "passed", "skipped", "failed", "standardOut", "standardError"
+                    outputs.upToDateWhen { false }
+                    showStandardStreams = true
+                }
+            }
+        }
+        animationsDisabled = true
+    }
+}
+
+// Tarea Html para Dokka
+tasks.named("dokkaHtml") {
+    outputDirectory.set(file("${projectDir}/documentation/generated/dokka/html"))
+    moduleName.set("AppNotas")
+
+    dokkaSourceSets {
+        configureEach {
+            sourceRoots.from(file("app/src/main/java"))
+            skipEmptyPackages.set(false)
+            suppress.set(false)
+            reportUndocumented.set(false)
+
+            perPackageOption {
+                matchingRegex.set(".*\\.androidTestRelease.*")
+                reportUndocumented.set(false)
+                suppress.set(true)
+            }
+
+            perPackageOption {
+                matchingRegex.set(".*\\.samples.*")
+                reportUndocumented.set(false)
+                suppress.set(true)
+            }
+        }
+    }
+}
+
+
+// Tarea Markdown para Dokka con manuales
+tasks.register("dokkaMarkdown", org.jetbrains.dokka.gradle.DokkaTask) {
+    outputDirectory.set(file("${projectDir}/documentation/generated/dokka/markdown"))
+    moduleName.set("AppNotas")
+
+    dokkaSourceSets {
+        configureEach {
+            sourceRoots.from(file("app/src/main/java"))
+            includes.from("MODULE.md")
+            reportUndocumented.set(true)
+            skipEmptyPackages.set(false)
+            suppress.set(false)
+            documentedVisibilities.set([org.jetbrains.dokka.DokkaConfiguration.Visibility.PUBLIC,
+                                        org.jetbrains.dokka.DokkaConfiguration.Visibility.PRIVATE])
+
+            perPackageOption {
+                matchingRegex.set(".*\\.androidTestRelease.*") // Excluir paquetes de prueba
+                reportUndocumented.set(false)
+                suppress.set(true)
+            }
+
+            perPackageOption {
+                matchingRegex.set(".*\\.samples.*") // Excluir paquetes de ejemplos
+                reportUndocumented.set(false)
+                suppress.set(true)
+            }
+        }
+    }
+}
+
+
+tasks.register("generateManuals") {
+    dependsOn("dokkaMarkdown")
+
+    def docsToGenerate = [
+            "Manuales": [
+                    "Manual_de_usuario.md",
+                    "Manual_de_instalacion.md",
+                    "Manual_de_configuracion_y_administracion.md"
+            ],
+            "Tutoriales": [
+                    "tutorial_crear_nota.md",
+                    "tutorial_borrar_nota.md",
+                    "tutorial_recuperar_nota.md"
+            ]
+    ]
+
+    doLast {
+        def outputDir = file("${projectDir}/documentation/generated/manual")
+        outputDir.mkdirs()
+
+        docsToGenerate.each { category, files ->
+            files.each { filename ->
+                def inputFile = file("${projectDir}/documentation/manual_input/${filename}")
+                if (inputFile.exists()) {
+                    def content = inputFile.text
+                            .replace("{{update_date}}", new Date().format("dd/MM/yyyy HH:mm"))
+                            .replace("``(dokka/latest-update)``", new Date().format("dd/MM/yyyy HH:mm"))
+
+                    // Añadir footer solo a tutoriales
+                    if (category == "Tutoriales") {
+                        content += """
+
+---
+
+### 🔙 Volver al Manual de Usuario
+[« Manual principal](Manual_de_usuario.md)
+"""
+                    }
+
+                    new File(outputDir, filename).write(content)
+                }
+            }
+        }
+    }
+}
+
+
+dependencies {
+    implementation libs.androidx.core.ktx
+    implementation libs.androidx.appcompat
+    implementation libs.androidx.activity
+    implementation libs.androidx.constraintlayout
+    implementation libs.androidx.navigation.runtime.android
+    implementation libs.androidx.navigation.ui.ktx
+    implementation libs.androidx.room.common.jvm
+    implementation libs.androidx.room.runtime.android
+    implementation 'com.github.bumptech.glide:glide:4.16.0'
+    implementation libs.core.ktx
+    implementation libs.androidx.junit.ktx
+    implementation libs.androidx.espresso.contrib
+    //testImplementation project(':app')
+    implementation platform('com.google.firebase:firebase-bom:33.13.0')
+    implementation 'com.google.firebase:firebase-analytics'
+
+    def nav_version = "2.7.6"
+    implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
+    implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
+
+    implementation 'com.google.android.material:material:1.11.0'
+    implementation 'com.ncorti:slidetoact:0.9.0'
+    implementation 'androidx.viewpager2:viewpager2:1.1.0'
+    implementation "androidx.room:room-ktx:2.7.1"
+
+    implementation "androidx.room:room-runtime:2.7.1"
+    kapt "androidx.room:room-compiler:2.7.1"
+    androidTestImplementation "androidx.arch.core:core-testing:2.2.0"
+
+    testImplementation libs.junit
+    androidTestImplementation libs.androidx.junit
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    androidTestImplementation libs.androidx.room.testing
+    androidTestImplementation libs.androidx.core.testing.v210
+    testImplementation libs.kotlinx.coroutines.test.v173
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.0"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.0"
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+
+    testImplementation libs.mockito.core
+    testImplementation "org.mockito:mockito-inline:5.1.0"
+    testImplementation "net.bytebuddy:byte-buddy:1.14.5"
+    testImplementation "net.bytebuddy:byte-buddy-agent:1.14.5"
+
+    androidTestImplementation 'androidx.test:runner:1.5.2'
+    androidTestImplementation 'androidx.test:rules:1.5.0'
+
+    androidTestImplementation 'androidx.test.espresso:espresso-contrib:3.6.1'
+
+    dokkaPlugin "org.jetbrains.dokka:gfm-plugin:1.8.10"
+}

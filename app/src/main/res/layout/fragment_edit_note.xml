@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:padding="16dp"
+    tools:context=".EditNoteFragment">
+
+    <!-- Campo de entrada para el título -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/titleInputLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:labelFor="@id/titleEdittext"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:maxWidth="488dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/titleEdittext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/title"
+            android:autofillHints="title"
+            android:inputType="textCapSentences"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:maxWidth="488dp"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Campo de entrada para la descripción -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/descInputLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:textSize="18sp"
+        android:layout_marginBottom="16dp"
+        android:labelFor="@id/descEditText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titleInputLayout"
+        app:layout_constraintBottom_toTopOf="@id/imageRecyclerView"
+        android:maxWidth="488dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/descEditText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:maxWidth="488dp"
+            android:minWidth="280dp"
+            android:hint="@string/note"
+            android:autofillHints="description"
+            android:gravity="start|top"
+            android:inputType="textMultiLine" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- RecyclerView para las imágenes -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/imageRecyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="@string/listado_de_imagenes"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:spanCount="2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/descInputLayout"
+        app:layout_constraintBottom_toTopOf="@id/addImageButton"/>
+
+    <!-- Botón para añadir imágenes -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/addImageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_margin="10dp"
+        android:contentDescription="@string/a_adir_una_imagen_a_la_nota"
+        android:text="@string/a_adir_imagen"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/saveFAB"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageRecyclerView" />
+
+    <!-- Texto para mostrar la última edición -->
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/lastEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/texto_de_ultima_edicion"
+        android:text="@string/ultima_edicion"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/addImageButton" />
+
+    <!-- Botón flotante para guardar la nota -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/saveFAB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:contentDescription="@string/guardar_la_nota"
+        android:src="@drawable/ic_check_black_24dp"
+        app:backgroundTint="@color/primary"
+        app:tint="@color/secondaryContainer"
+        app:elevation="6dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

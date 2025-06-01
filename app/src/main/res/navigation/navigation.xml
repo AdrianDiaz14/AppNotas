@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/nav_home">
+
+    <!-- Pantalla principal -->
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.appnotas.AllNotesFragment"
+        android:label="Inicio"
+        tools:layout="@layout/fragment_all_notes">
+
+        <!-- Navegación a edición -->
+        <action
+            android:id="@+id/action_allNotesFragment_to_editNoteFragment"
+            app:destination="@id/editNoteFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <!-- Pantalla de papelera -->
+    <fragment
+        android:id="@+id/nav_trash"
+        android:name="com.example.appnotas.TrashFragment"
+        android:label="Papelera"
+        tools:layout="@layout/fragment_trash" />
+
+    <!-- Pantalla de edición -->
+    <fragment
+        android:id="@+id/editNoteFragment"
+        android:name="com.example.appnotas.EditNoteFragment"
+        android:label="Editar nota"
+        tools:layout="@layout/fragment_edit_note">
+        <argument
+            android:name="updateNote"
+            android:defaultValue="@null"
+            app:argType="com.example.appnotas.database.Notes"
+            app:nullable="true" />
+    </fragment>
+
+    <!-- Pantalla de ayuda -->
+    <fragment
+        android:id="@+id/nav_help"
+        android:name="com.example.appnotas.HelpFragment"
+        android:label="Ayuda"
+        tools:layout="@layout/fragment_help" />
+</navigation>

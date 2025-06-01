@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- App Metadata -->
+    <string name="app_name">Notes</string>
+
+    <!-- Editor Screen -->
+    <string name="title">Título</string>
+    <string name="note">Nota</string>
+    <string name="a_adir_imagen">Añadir imagen</string>
+    <string name="borrar_imagen">Eliminar imagen</string>
+    <string name="ultima_edicion">Última edición: </string>
+
+    <!-- Accessibility Content Descriptions -->
+    <string name="icono_imagenes">Ícono de imágenes adjuntas</string>
+    <string name="imagen_ampliada">Imagen ampliada</string>
+    <string name="imagen_adjunta">Imagen adjunta</string>
+
+    <!-- Help System -->
+    <string name="help_general">Bienvenido a la aplicación de notas</string>
+    <string name="help_home">Pantalla principal: Ver y gestionar notas</string>
+    <string name="help_trash">Papelera: Recuperar o borrar notas</string>
+    <string name="help_help_section">Preguntas frecuentes</string>
+    <string name="help_edit_note">Editor: Escribe y añade imágenes</string>
+
+    <!-- Theme Selection -->
+    <string name="choose_theme">Tema de la aplicación</string>
+    <string name="system_default">Sistema</string>
+    <string name="dark">Oscuro</string>
+    <string name="light">Claro</string>
+
+    <string name="this_process_is_irreversible">This Process Is IRREVERSIBLE</string>
+    <string name="abrir_ayuda">Abrir ayuda</string>
+    <string name="crear_nueva_nota">Crear nueva nota</string>
+    <string name="titulo_de_la_nota">Titulo de la nota</string>
+    <string name="a_adir_una_imagen_a_la_nota">Añadir una imagen a la nota</string>
+    <string name="texto_de_ultima_edicion">Texto de ultima edicion</string>
+    <string name="guardar_la_nota">Guardar la nota</string>
+    <string name="imagen_de_perfil_del_usuario">Imagen de perfil del usuario</string>
+    <string name="selector_de_opciones">Selector de opciones</string>
+    <string name="imagen_decorativa_de_fondo_del_encabezado">Imagen decorativa de fondo del encabezado</string>
+    <string name="cerrar_la_vista">Cerrar la vista</string>
+    <string name="recuperar">Recuperar</string>
+    <string name="inicio">Inicio</string>
+    <string name="papelera">Papelera</string>
+    <string name="ayuda">Ayuda</string>
+    <string name="preguntas_frecuentes">Preguntas frecuentes</string>
+    <string name="la_papelera_est_vac_a">La papelera está vacía</string>
+    <string name="las_notas_permanecer_n_7_d_as_en_la_papelera_antes_de_ser_eliminadas_definitivamente">Las notas permanecerán 7 días en la papelera antes de ser eliminadas definitivamente</string>
+    <string name="carga_de_la_imagen">Carga de la imagen</string>
+    <string name="estas_seguro_de_eliminar_todas_las_notas">¿Estas seguro de eliminar todas las notas?</string>
+    <string name="este_proceso_es_irreversible">Este proceso es irreversible</string>
+    <string name="deslizar_a_la_derecha_para_confirmar_operacion">Deslizar a la derecha para confirmar operacion</string>
+    <string name="la_papelera_esta_vacia">La papelera esta vacia</string>
+    <string name="lista_de_notas_eliminadas">Lista de notas eliminadas</string>
+    <string name="mensaje_sobre_la_papelera">Mensaje sobre la papelera</string>
+    <string name="listado_de_imagenes">Listado de imagenes</string>
+    <string name="indicador_de_im_genes">Indicador de imágenes adjuntadas</string>
+    <string name="lista_de_im_genes_de_la_nota">Lista de imágenes de la nota</string>
+    <string name="eliminar_imagen">Eliminar imagen</string>
+    <string name="eliminar">Eliminar</string>
+    <string name="copiar">Copiar</string>
+    <string name="dark_mode_selection">Dark Mode Selection</string>
+    <string name="borrar_todas_las_notas">Borrar todas las notas</string>
+    <string name="opci_n_inicio">Opción Inicio</string>
+    <string name="opci_n_papelera">Opción Papelera</string>
+    <string name="opci_n_ayuda">Opción Ayuda</string>
+    <string name="open_drawer">Abrir menú de navegación</string>
+</resources>

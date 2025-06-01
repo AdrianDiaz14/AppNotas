@@ -1,0 +1,45 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Theme.MyApp" parent="Theme.Material3.Light.NoActionBar">
+        <!-- Colores principales -->
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryContainer">@color/primaryContainer</item>
+        <item name="colorSecondary">@color/secondary</item>
+        <item name="colorSecondaryContainer">@color/secondaryContainer</item>
+        <item name="colorTertiary">@color/tertiary</item>
+        <item name="colorTertiaryContainer">@color/tertiaryContainer</item>
+
+        <!-- Colores de fondo y superficie -->
+        <item name="android:colorBackground">@color/background</item>
+        <item name="android:statusBarColor">@color/primaryContainer</item>
+
+        <!-- Configuración de fuentes -->
+        <item name="android:fontFamily">@font/schibsted_grotesk</item>
+
+        <!-- Desactivar la ActionBar si usas Jetpack Compose -->
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+
+        <!-- Configuración para ActionMode -->
+        <item name="actionModeBackground">?attr/colorPrimary</item>
+        <item name="actionModeStyle">@style/MyActionModeStyle</item>
+        <item name="actionModeCloseButtonStyle">@style/MyActionModeCloseButton</item>
+        <item name="windowActionModeOverlay">true</item>
+    </style>
+
+    <!-- Estilo personalizado para ActionMode -->
+    <style name="MyActionModeStyle" parent="@style/Widget.Material3.ActionMode">
+        <item name="background">?attr/colorPrimary</item>
+        <item name="titleTextStyle">@style/MyActionModeTitle</item>
+    </style>
+
+    <!-- Estilo para el título del ActionMode -->
+    <style name="MyActionModeTitle" parent="@style/TextAppearance.Material3.TitleMedium">
+        <item name="android:textColor">@color/onPrimary</item>
+    </style>
+
+    <!-- Estilo para el botón de cierre -->
+    <style name="MyActionModeCloseButton" parent="@style/Widget.Material3.Button.TextButton">
+        <item name="iconTint">@color/onPrimary</item>
+    </style>
+
+</resources>

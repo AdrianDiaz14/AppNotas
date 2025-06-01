@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:contentDescription="@string/opci_n_inicio"
+            android:icon="@drawable/home_icon"
+            android:title="@string/inicio" />
+
+        <item
+            android:id="@+id/nav_trash"
+            android:contentDescription="@string/opci_n_papelera"
+            android:icon="@android:drawable/ic_menu_delete"
+            android:title="@string/papelera" />
+    </group>
+
+    <item android:title="@string/ayuda">
+        <menu>
+            <item
+                android:id="@+id/nav_help"
+                android:contentDescription="@string/opci_n_ayuda"
+                android:icon="@android:drawable/ic_dialog_info"
+                android:menuCategory="secondary"
+                android:title="@string/preguntas_frecuentes" />
+        </menu>
+    </item>
+</menu>

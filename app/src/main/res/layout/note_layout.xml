@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/noteConstrainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardBackgroundColor="@color/primaryLight"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="2dp"
+    app:strokeColor="@color/indigo"
+    app:strokeWidth="1dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- Indicador de imágenes en la nota -->
+        <ImageView
+            android:id="@+id/imageIndicator"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:minWidth="48dp"
+            android:minHeight="48dp"
+            android:contentDescription="@string/icono_imagenes"
+            android:importantForAccessibility="yes"
+            android:src="@android:drawable/ic_menu_camera"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/noteTitle"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/indigo"
+            tools:visibility="visible" />
+
+        <!-- Título de la nota -->
+        <TextView
+            android:id="@+id/noteTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/nunito"
+            android:maxLines="2"
+            android:textColor="@color/onSurface"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/imageIndicator"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Titulo de la nota" />
+
+        <!-- Contenido de la nota -->
+        <TextView
+            android:id="@+id/noteDesc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/nunito"
+            android:maxLines="11"
+            android:textSize="18sp"
+            android:padding="1dp"
+            android:textColor="@color/primary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/noteTitle"
+            tools:text="Insertar descripcion de la nota" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/imageRecyclerView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:visibility="gone"
+            android:importantForAccessibility="no"
+            android:contentDescription="@string/lista_de_im_genes_de_la_nota"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/noteDesc"
+            tools:listitem="@layout/image_item" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

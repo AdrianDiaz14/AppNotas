@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Colores Principales -->
+    <color name="primary">#6200EE</color>  <!-- Color principal de la app -->
+    <color name="primaryLight">#E2D2FA</color>  <!-- Color principal claro de la app -->
+    <color name="primaryContainer">#EADDFF</color>  <!-- Variante más clara -->
+    <color name="onPrimary">#FFFFFF</color>  <!-- Color del texto sobre primary -->
+
+    <color name="secondary">#625B71</color>  <!-- Color secundario para botones secundarios -->
+    <color name="secondaryContainer">#E8DEF8</color>
+    <color name="onSecondary">#FFFFFF</color>
+
+    <color name="tertiary">#7D5260</color>  <!-- Color terciario (uso ocasional) -->
+    <color name="tertiaryContainer">#FFD8E4</color>
+    <color name="onTertiary">#FFFFFF</color>
+
+    <!-- Colores de Fondo -->
+    <color name="background">#FFFBFE</color>  <!-- Fondo de la app -->
+    <color name="surface">#FFFFFF</color>  <!-- Fondo de tarjetas o secciones -->
+    <color name="outline">#79747E</color>  <!-- Color de bordes y separadores -->
+
+    <!-- Colores de Texto -->
+    <color name="onBackground">#1C1B1F</color>  <!-- Color de texto sobre fondo -->
+    <color name="onSurface">#1C1B1F</color>
+
+    <color name="indigo">#4B0082</color>  <!-- Azul violáceo profundo -->
+    <color name="error">#B00020</color>  <!-- Rojo estándar para errores -->
+    <color name="green">#0F540C</color>  <!-- Verde estándar para selección -->
+
+    <color name="surfaceVariant">#E0E0E0</color> <!-- Color de fondo para elementos elevados -->
+
+    <color name="strockColor">#D1D1D1</color>
+    <color name="cardBckGround">#FFFFFF</color>
+
+</resources>

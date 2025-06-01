@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardBackgroundColor="@color/primaryLight"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="2dp"
+    app:strokeColor="@color/indigo"
+    app:strokeWidth="1dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- Título de la nota -->
+        <TextView
+            android:id="@+id/noteTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nunito"
+            android:maxLines="2"
+            android:textColor="@color/onSurface"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/imageIndicator"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Título de nota eliminada" />
+
+        <!-- Indicador de imágenes -->
+        <ImageView
+            android:id="@+id/imageIndicator"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="8dp"
+            android:contentDescription="@string/indicador_de_im_genes"
+            android:src="@android:drawable/ic_menu_camera"
+            android:visibility="gone"
+            android:importantForAccessibility="yes"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/indigo"
+            tools:visibility="visible" />
+
+        <!-- Descripción de la nota -->
+        <TextView
+            android:id="@+id/noteDescription"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/nunito"
+            android:textSize="18sp"
+            android:maxLines="3"
+            android:textColor="@color/onBackground"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/noteTitle"
+            tools:text="Contenido de la nota eliminada..." />
+
+        <!-- Fecha de eliminación -->
+        <TextView
+            android:id="@+id/deletionDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/onSurface"
+            android:textSize="18sp"
+            android:textStyle="bold|italic"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/noteDescription"
+            tools:text="Eliminada el 12/12/2023" />
+
+        <!-- Botón de recuperación -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/restoreButton"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="@color/primary"
+            android:padding="5dp"
+            android:paddingStart="15dp"
+            android:paddingEnd="10dp"
+            android:text="@string/recuperar"
+            android:textColor="@color/background"
+            app:icon="@android:drawable/ic_menu_revert"
+            app:iconTint="@color/background"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/deletionDate"
+            app:strokeColor="@color/primaryContainer" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- Vista vacía -->
+        <TextView
+            android:id="@+id/emptyView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:contentDescription="@string/la_papelera_esta_vacia"
+            android:text="@string/la_papelera_est_vac_a"
+            android:textColor="@color/onSurface"
+            android:textSize="18sp"
+            android:visibility="gone"/>
+
+        <!-- Lista de notas eliminadas -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:contentDescription="@string/lista_de_notas_eliminadas"
+            android:clipToPadding="false"
+            android:paddingBottom="72dp"/>
+
+    </LinearLayout>
+
+    <!-- Mensaje informativo fijo en la parte inferior -->
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        android:elevation="4dp"
+        android:padding="16dp"
+        android:text="@string/las_notas_permanecer_n_7_d_as_en_la_papelera_antes_de_ser_eliminadas_definitivamente"
+        android:contentDescription="@string/mensaje_sobre_la_papelera"
+        android:textAlignment="center"
+        android:textColor="@color/primary"
+        android:textSize="18sp"
+        app:backgroundTint="@color/surfaceVariant"
+        app:lineHeight="20sp" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
