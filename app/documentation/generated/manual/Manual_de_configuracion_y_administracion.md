@@ -31,7 +31,7 @@ Este manual describe la configuración y administración de **AppNotas**, incluy
 
 **Error al cargar notas**  
 **Causa:** Problema de sincronización con la base de datos.  
-**Solución:** Revisa [NotesViewModel](../generated/dokka/markdown/-app-notas/com.example.appnotas.database/-notes-view-model/index.md).
+**Solución:** Revisa [NotesViewModel](../dokka/markdown/-app-notas/com.example.appnotas.database/-notes-view-model/index.md).
 
 **Fallos de seguridad**  
 **Causa:** La protección de notas no está habilitada.  
@@ -45,8 +45,8 @@ Este manual describe la configuración y administración de **AppNotas**, incluy
 
 
 **Más información técnica:**  
-[NotesRepository](../generated/dokka/markdown/-app-notas/com.example.appnotas.database/-notes-repository/index.md)  
-[NotesRoomDatabase](../generated/dokka/markdown/-app-notas/com.example.appnotas.database/-notes-room-database/index.md)
+[NotesRepository](../dokka/markdown/-app-notas/com.example.appnotas.database/-notes-repository/index.md)  
+[NotesRoomDatabase](../dokka/markdown/-app-notas/com.example.appnotas.database/-notes-room-database/index.md)
 
 
 **Este manual se actualiza automáticamente con Dokka al ejecutar:**  
