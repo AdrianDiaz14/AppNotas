@@ -17,8 +17,8 @@
 > 💡 **Consejo**: Las notas se ordenan por fecha de eliminación (más recientes primero).
 
 > **Más detalles técnicos:**  
-[Método para restaurar la nota](../generated/dokka/markdown/-app-notas/com.example.appnotas.database/-notes-view-model/restore-note.md)  
-[Clase Notes](../generated/dokka/markdown/-app-notas/com.example.appnotas.database/-notes/index.md)
+[Método para restaurar la nota](../dokka/markdown/-app-notas/com.example.appnotas.database/-notes-view-model/restore-note.md)  
+[Clase Notes](../dokka/markdown/-app-notas/com.example.appnotas.database/-notes/index.md)
 
 
 ---
