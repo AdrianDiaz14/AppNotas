@@ -16,7 +16,7 @@ Este manual describe la configuración y administración de **AppNotas**, incluy
 ### 2️⃣ **Seguridad del contenido de las notas**
 **FLAGS:** Se ha inhabilitado la captura de pantalla mediante foto o vídeo de los contenidos de las notas mediante los correspondientes **FLAGS**.
 
-[Clase contenedora de los FLAGS](../generated/dokka/markdown/-app-notas/com.example.appnotas/-edit-note-fragment/on-view-created.md)
+[Clase contenedora de los FLAGS](../dokka/markdown/-app-notas/com.example.appnotas/-edit-note-fragment/on-view-created.md)
 
 ---
 
