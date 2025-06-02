@@ -39,13 +39,13 @@ Seguidamente también se han llevado a cabo dos pruebas de accesibilidad sobre l
 
 > Se trata de un lector de pantalla integrado en Android que permite a los usuarios con discapacidad visual navegar y usar aplicaciones mediante gestos o síntesis de voz. Los *contentDescription* implantados anteriormente, resultan imprescindibles para un correcto uso de esta herramienta.
 
-[Accesibilidad - Talkback](https://youtu.be/4t0WuspAfeE)
+[![Ver Video - Talkback](https://img.shields.io/badge/Ver_Video-Talkback-FF0000?style=for-the-badge&logo=youtube)](https://youtu.be/4t0WuspAfeE)  
 
 #### 2. Accesibilidad con interruptores
 
 > Evalúa si la aplicación puede ser usada mediante accesibilidad con interruptores, con la función de Android que permite controlar el dispositivo con uno o varios interruptores físicos en lugar de toques en la pantalla, que permitiría a personas con discapacidad poder hacer uso del gestor de notas.
 
-[Accesibilidad con interruptores](https://youtube.com/shorts/OUV0vN01W_8)
+[![Ver Video - Accesibilidad con Interruptores](https://img.shields.io/badge/Ver_Video-Accesibilidad_Interruptores-FF0000?style=for-the-badge&logo=youtube)](https://youtube.com/shorts/OUV0vN01W_8)  
 
 ## PRUEBAS DE INTEGRACIÓN
 
