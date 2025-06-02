@@ -1,6 +1,6 @@
 # INFORME DE PRUEBAS
 
-https://i.imgur.com/F9RYwG5.png
+![Logo de AppNotas](https://i.imgur.com/SRHLNK9.png)  
 
 ## PRUEBAS DE ACCESIBILIDAD
 
@@ -39,17 +39,21 @@ Seguidamente también se han llevado a cabo dos pruebas de accesibilidad sobre l
 
 > Se trata de un lector de pantalla integrado en Android que permite a los usuarios con discapacidad visual navegar y usar aplicaciones mediante gestos o síntesis de voz. Los *contentDescription* implantados anteriormente, resultan imprescindibles para un correcto uso de esta herramienta.
 
-![Accesibilidad - Talkback](https://www.youtube.com/embed/4t0WuspAfeE?feature=oembed)
+[Accesibilidad - Talkback](https://youtu.be/4t0WuspAfeE)
 
 #### 2. Accesibilidad con interruptores
 
 > Evalúa si la aplicación puede ser usada mediante accesibilidad con interruptores, con la función de Android que permite controlar el dispositivo con uno o varios interruptores físicos en lugar de toques en la pantalla, que permitiría a personas con discapacidad poder hacer uso del gestor de notas.
 
-![Accesibilidad con interruptores](https://www.youtube.com/embed/OUV0vN01W_8?feature=oembed)
+[Accesibilidad con interruptores](https://youtube.com/shorts/OUV0vN01W_8)
 
 ## PRUEBAS DE INTEGRACIÓN
 
-Este tipo de pruebas evalúan la interacción entre distintos elementos de la App para asegurar que todas las partes individuales, cuando se combinan, trabajen como se espera y se comuniquen adecuadamente. En el caso de AppNotas, estas pruebas son fundamentales para garantizar el correcto funcionamiento en conjunto de las capas de base de datos (Room), repositorio, ViewModel o UI de la aplicación. A continuación, se describen las pruebas de integración más relevantes llevadas a cabo en el desarrollo de la aplicación:
+Este tipo de pruebas evalúan la interacción entre distintos elementos de la App para asegurar que todas las partes individuales, cuando se combinan, trabajen como se espera y se comuniquen adecuadamente. En el caso de AppNotas, estas pruebas son fundamentales para garantizar el correcto funcionamiento en conjunto de las capas de base de datos (Room), repositorio, ViewModel o UI de la aplicación. 
+
+Estas pruebas de integración combinan JUnit 4, AndroidJUnit4, Room Database en memoria, LiveData, coroutines y FakeNotesRepository para verificar que la interacción entre NotesDao, NotesRepository y NotesViewModel opera correctamente en conjunto dentro del sistema, incluso tras modificaciones en la lógica de la aplicación.
+
+A continuación, se describen las pruebas de integración más relevantes llevadas a cabo en el desarrollo de la aplicación:
 
 ### 1. Prueba de actualización de notas en la base de datos
 
@@ -90,9 +94,11 @@ Este tipo de pruebas evalúan la interacción entre distintos elementos de la Ap
 
 ## PRUEBAS DE REGRESIÓN
 
-Los tests de regresión verifican que las funcilitades existentes de la aplicación siguen funcionando correctamente después de introducir cambios, actualizaciones o nuevas características. Su objetivo es detectar posibles errores que puedan surgir debido a modificaciones en el código, asegurando que el comportamiento esperado no se vea afectado.
+Los tests de regresión verifican que las funcionalidades existentes de la aplicación siguen funcionando correctamente después de introducir cambios, actualizaciones o nuevas características. Su objetivo es detectar posibles errores que puedan surgir debido a modificaciones en el código, asegurando que el comportamiento esperado no se vea afectado. Por ello, es importante ejecutar estas pruebas siempre que se hagan cambios en el código de la aplicación, para asegurar su correcto funcionamiento tras cada modificación relevante.
 
-En el contexto de la aplicación AppNotas, este tipo de prueba es crucial para garantizar que las operaciones básicas con notas (creación, eliminación, restauración y limpieza automática) continúen funcionando como se espera, incluso después de actualizaciones futuras.
+En el contexto de la aplicación AppNotas, este tipo de prueba es crucial para garantizar que las operaciones básicas con notas continúen funcionando como se espera, incluso después de actualizaciones futuras. Por lo tanto, las funcionalidades básicas que interesa probar para asegurar el funcionamiento de la app, con; inserción de notas, eliminación a la papelera, eliminación tras 7 días y recuperación de notas desde la papelera.
+
+Estas pruebas combinan **JUnit 4, Room Database en memoria, LiveData, coroutines y AndroidJUnit4** para verificar que las funciones de **NotesDao** operan correctamente incluso después de modificaciones en la lógica de la aplicación.
 
 ### 1. Validación de inserción de notas
 
@@ -153,6 +159,10 @@ La nota restaurada reaparece en la lista de notas activas, confirmando que la re
 ## PRUEBAS DE VOLUMEN Y ESTRÉS
 
 Las pruebas de volumen y estrés tienen como objetivo evaluar el comportamiento de la aplicación ante una carga elevada de datos y operaciones concurrentes, asegurando su estabilidad y rendimiento en situaciones extremas.
+
+En el caso de AppNotas, se prueban situaciones con distintos niveles de carga. Las pruebas se centran en la gestión de un gran número de notas, de imágenes o del contenido de texto. Así se evalúa el comportamiento de la App en situaciones extremas que pudieran ocurrir.
+
+Estas pruebas de volumen y estrés combinan JUnit 4, AndroidJUnit4, Room Database en memoria, LiveData, coroutines, CountDownLatch y AtomicInteger para verificar que la aplicación mantiene rendimiento, estabilidad y eficiencia bajo condiciones de alta carga y múltiples operaciones simultáneas.
 
 ### 1. Pruebas de Volumen
 
@@ -312,6 +322,10 @@ Las pruebas de volumen y estrés tienen como objetivo evaluar el comportamiento 
 
 Las pruebas de seguridad tienen como objetivo garantizar la protección de los datos almacenados en la aplicación, la prevención de ataques y la implementación de medidas que eviten accesos no autorizados.
 
+En el caso de AppNotas, se han realizado pruebas enfocadas en evaluar la resistencia de la aplicación ante ataques de inyección de código, la protección de la interfaz frente a capturas no autorizadas y la correcta manipulación de datos en la UI. Además, se ha complementado el análisis con un estudio de seguridad estático utilizando MobSF (Mobile Security Framework), lo que ha permitido detectar riesgos en la configuración de permisos, la estructura del código y el almacenamiento de información.
+
+Estas pruebas de seguridad combinan JUnit 4, AndroidJUnit4, Room Database en memoria, LiveData, coroutines, ActivityScenario, Espresso y CountDownLatch para verificar que la aplicación implementa protecciones contra capturas de pantalla, prevención de inyección SQL y correcto manejo de datos sensibles.
+
 ### Pruebas implementadas
 
 1. **Protección contra inyección SQL** (SQLInjectionTest)  
@@ -338,6 +352,8 @@ Principales hallazgos:
 
 Las pruebas de uso de recursos miden cómo la aplicación consume componentes críticos del dispositivo como batería, almacenamiento y memoria.
 
+En estas pruebas se ha combinado JUnit 4, AndroidJUnit4, Room Database en memoria, LiveData, coroutines, BatteryManager, PowerManager, InstrumentationRegistry y FakeNotesDao para verificar que la aplicación optimiza consumo de batería, gestiona almacenamiento de manera eficiente y previene un uso excesivo de recursos del dispositivo.
+
 ### 1. Validación de consumo eficiente de batería
 
 **Clase de testeo:** BatteryUsageTest  
@@ -349,7 +365,7 @@ Las pruebas de uso de recursos miden cómo la aplicación consume componentes cr
 **Resultado obtenido:**
 - Consumo de batería ≤5% en la operación crítica
 - Ausencia de WakeLocks residuales
-- Estabilidad demostrada al manejar 1,000 operaciones de DB consecutivas
+- Estabilidad demostrada al manejar 1.000 operaciones de DB consecutivas
 
 ### 2. Gestión óptima de almacenamiento
 
@@ -364,6 +380,31 @@ Las pruebas de uso de recursos miden cómo la aplicación consume componentes cr
 - Limpieza efectiva de archivos temporales post-prueba
 - Integridad de datos (las URIs de imágenes se asociaron correctamente a las notas)
 
+
+### 3. Análisis de recursos con Android Profiler  
+
+Además de los tests automatizados, se ha utilizado **Android Profiler** para monitorear el consumo de recursos en tiempo real mientras la aplicación está en ejecución.  
+
+**Elementos analizados:**  
+
+**Capture System Activities:** Registro detallado de eventos del sistema durante la ejecución de la aplicación.  
+![Capture System](https://i.imgur.com/6lSkuuG.jpeg)  
+
+**CPU Hotspots:** Identificación de las funciones más demandantes en términos de procesamiento.  
+![CPU Hotspots](https://i.imgur.com/KFrub4f.jpeg)  
+
+**Memory Usage:** Monitorización del consumo de memoria, incluyendo el impacto de las operaciones con Room Database.  
+![Memory Usage](https://i.imgur.com/vxpVdCL.jpeg)  
+
+**Track Memory:** Seguimiento de asignaciones de memoria para detectar posibles fugas.  
+![Track Memory](https://i.imgur.com/4YEdybg.jpeg)  
+
+**View Live Telemetry:** Visualización en tiempo real del comportamiento de la aplicación bajo diferentes condiciones.  
+![View Live Telemetry](https://i.imgur.com/Tu7mxbc.jpeg)  
+
+Con esta herramienta de Android Studio, se pueden identificar **puntos de optimización** en la gestión de memoria y procesos en segundo plano, asegurando que la aplicación se mantenga fluida y eficiente.  
+
+
 ### Resultados generales
 
 **Batería:**
@@ -373,3 +414,4 @@ Las pruebas de uso de recursos miden cómo la aplicación consume componentes cr
 **Almacenamiento:**
 - El uso de espacio es proporcional a los datos almacenados
 - Los recursos temporales se liberan adecuadamente
+

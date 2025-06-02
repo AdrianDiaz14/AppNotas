@@ -2,7 +2,6 @@ package com.example.appnotas.uso_de_recursos
 
 import android.content.Context
 import android.os.BatteryManager
-import android.os.Build
 import android.os.PowerManager
 import androidx.lifecycle.ViewModelProvider
 import androidx.test.core.app.ApplicationProvider
@@ -62,7 +61,7 @@ class BatteryUsageTest {
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
             val initialBattery = batteryManager.getIntProperty(BatteryManager.BATTERY_PROPERTY_CAPACITY)
 
-            // Ejecutar operación de prueba (ej: guardar 100 notas rápidamente)
+            // Ejecutar operación de prueba
             simulateIntensiveOperation()
 
             val finalBattery = batteryManager.getIntProperty(BatteryManager.BATTERY_PROPERTY_CAPACITY)
@@ -100,7 +99,7 @@ class BatteryUsageTest {
                 notesViewModel.insertNote(note)
             }
 
-            // Pequeña pausa para simular un flujo más realista (10ms entre notas)
+            // Pequeña pausa para simular un flujo más realista
             Thread.sleep(10)
         }
 

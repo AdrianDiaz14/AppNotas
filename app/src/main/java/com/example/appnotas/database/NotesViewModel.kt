@@ -77,5 +77,4 @@ class NotesViewModel(application: Application) : AndroidViewModel(application) {
     fun cleanOldDeletedNotes() = viewModelScope.launch(Dispatchers.IO) {
         repository.cleanOldDeletedNotes()
     }
-
 }

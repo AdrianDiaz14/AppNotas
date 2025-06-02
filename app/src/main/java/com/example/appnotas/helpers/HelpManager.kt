@@ -7,19 +7,11 @@ import androidx.annotation.StringRes
 import com.example.appnotas.R
 
 /**
- * Obtiene el recurso de string de ayuda contextual para una pantalla específica.
+ * Clase para manejar la ayuda contextual en la aplicación.
  *
- * @see AllNotesFragment Para acceso al contexto de la pantalla principal.
- * @see EditNoteFragment Para acceso al contexto de edición de notas.
- *
- * @param screenId ID de la pantalla (puede ser un ID de menú o fragmento).
- * @return ID del recurso de string que contiene el mensaje de ayuda.
- *
- * ## Ejemplo de uso:
- * ```kotlin
- * val helpResId = HelpManager.getHelpForScreen(R.id.nav_home)
- * HelpManager.showContextHelp(context, helpResId)
- * ```
+ * Proporciona mensajes de ayuda basados en la pantalla actual. Además,
+ * incorpora un temporizador interno para evitar la visualización repetitiva
+ * del mismo mensaje en cortos intervalos de tiempo.
  */
 object HelpManager {
     private var lastHelpShownTime = 0L
@@ -38,7 +30,6 @@ object HelpManager {
      * ```
      * @sample com.sba.notes.samples.HelpManagerSamples.getHelpSample
      */
-
     @StringRes
     fun getHelpForScreen(screenId: Int?): Int {
         return when (screenId) {
@@ -66,9 +57,7 @@ object HelpManager {
      * @author Adrian Diaz
      * @since 1.2
      */
-
     fun showContextHelp(context: Context, @StringRes helpTextRes: Int) {
-        // Evitar toasts duplicados en rápida sucesión
         if (System.currentTimeMillis() - lastHelpShownTime < 2000) return
 
         lastHelpShownTime = System.currentTimeMillis()

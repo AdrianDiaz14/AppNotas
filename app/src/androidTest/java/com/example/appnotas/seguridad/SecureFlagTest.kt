@@ -34,7 +34,6 @@ class SecureFlagTest {
         val scenario = ActivityScenario.launch(MainActivity::class.java)
 
         scenario.onActivity { activity ->
-            // Navegar a AllNotesFragment si no está ya allí
             onView(withId(R.id.nav_host_fragment))
 
             // Verificar que el flag está establecido
@@ -58,7 +57,6 @@ class SecureFlagTest {
         val scenario = ActivityScenario.launch(MainActivity::class.java)
 
         scenario.onActivity { activity ->
-            // Navegar a EditNoteFragment
             val navController = activity.findNavController(R.id.nav_host_fragment)
             navController.navigate(R.id.action_allNotesFragment_to_editNoteFragment)
 

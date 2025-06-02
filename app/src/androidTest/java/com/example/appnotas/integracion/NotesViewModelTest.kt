@@ -35,7 +35,7 @@ class NotesViewModelTest {
         val repository = NotesRepository(dao)
         viewModel = NotesViewModel(ApplicationProvider.getApplicationContext())
 
-        // Se observa LiveData para asegurar de que se actualice en la prueba
+        // Se observa LiveData para asegurar que se actualice en la prueba
         viewModel.allNotes.observeForever {}
     }
 

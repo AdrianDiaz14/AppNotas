@@ -2,35 +2,12 @@
 
 # HelpManager
 
+[androidJvm]\
 object [HelpManager](index.md)
 
-Obtiene el recurso de string de ayuda contextual para una pantalla específica.
+Clase para manejar la ayuda contextual en la aplicación.
 
-#### Return
-
-ID del recurso de string que contiene el mensaje de ayuda.
-
-##  Ejemplo de uso:
-
-```kotlin
-val helpResId = HelpManager.getHelpForScreen(R.id.nav_home)
-HelpManager.showContextHelp(context, helpResId)
-```
-
-#### Parameters
-
-androidJvm
-
-| | |
-|---|---|
-| screenId | ID de la pantalla (puede ser un ID de menú o fragmento). |
-
-#### See also
-
-| | |
-|---|---|
-| AllNotesFragment | Para acceso al contexto de la pantalla principal. |
-| EditNoteFragment | Para acceso al contexto de edición de notas. |
+Proporciona mensajes de ayuda basados en la pantalla actual. Además, incorpora un temporizador interno para evitar la visualización repetitiva del mismo mensaje en cortos intervalos de tiempo.
 
 ## Functions
 

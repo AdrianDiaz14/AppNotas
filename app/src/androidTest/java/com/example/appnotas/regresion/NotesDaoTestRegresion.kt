@@ -70,9 +70,9 @@ class NotesDaoTestRegresion {
         // 1. Insertar una nueva nota
         val note = Notes(title = "Nota a eliminar", description = "Texto de prueba")
         dao.insertNote(note)
-        delay(100) // Pequeña espera para la inserción
+        delay(100)
 
-        // 2. Obtener el ID de la nota insertada (puede ser auto-generado)
+        // 2. Obtener el ID de la nota insertada
         val insertedNote = dao.getAllNotes().getOrAwaitValue().first()
 
         // 3. Marcar la nota como eliminada
@@ -81,9 +81,9 @@ class NotesDaoTestRegresion {
             deletionDate = System.currentTimeMillis()
         )
         dao.updateNote(deletedNote)
-        delay(100) // Pequeña espera para la actualización
+        delay(100)
 
-        // 4. Verificar en la papelera (getDeletedNotes)
+        // 4. Verificar en la papelera
         val deletedNotes = dao.getDeletedNotes().getOrAwaitValue()
 
         Assert.assertTrue(

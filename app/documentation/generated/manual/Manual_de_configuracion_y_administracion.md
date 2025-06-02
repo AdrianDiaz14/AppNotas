@@ -1,45 +1,29 @@
 # Manual de Configuración y Administración - AppNotas
-**Última actualización:** 01/06/2025 12:47
+**Última actualización:** 02/06/2025 23:34
 
 ---
 
 ## Introducción
 Este manual describe la configuración y administración de **AppNotas**, incluyendo ajustes avanzados y elementos autoactualizables con Dokka.
 
-**Otros manuales disponibles:**
-- [Manual de Usuario](../generated/manual/Manual_de_usuario.md)
-- [Manual de Instalación](../generated/manual/Manual_de_instalacion.md)
-
 ---
 
 ## Configuración General
 
 ### 1️⃣ **Preferencias de la aplicación**
-**Seguridad de notas:** Protege notas con autenticación **en Ajustes > Seguridad**  
-**Papelera de reciclaje:** Las notas eliminadas se almacenan por **7 días antes de ser borradas**
+**Papelera de reciclaje:** Las notas eliminadas se almacenan por **7 días antes de ser borradas** a modo de copia de seguridad recuperable
+
+### 2️⃣ **Seguridad del contenido de las notas**
+**FLAGS:** Se ha inhabilitado la captura de pantalla mediante foto o vídeo de los contenidos de las notas mediante los correspondientes **FLAGS**.
+
+[Clase contenedora de los FLAGS](../generated/dokka/markdown/-app-notas/com.example.appnotas/-edit-note-fragment/on-view-created.md)
 
 ---
 
 ## Gestión de Notas
 
-**Notas en papelera:** Restaurar o eliminar definitivamente.  
-**Exportación:** Las notas pueden exportarse como archivos `.txt` desde el menú.  
-**Adjuntar imágenes:** Habilitar permisos de acceso a galería en ajustes.
-
-**Más detalles en la documentación:**  
-[NotesRepository](../generated/dokka/markdown/-app-notas/com.example.appnotas.database/-notes-repository/index.md)
-
----
-
-## Administración de Datos
-
-### 1️⃣ **Respaldo de base de datos**
-**Ubicación:** La base de datos está en `data/data/com.example.appnotas/databases/notes.db`.  
-**Exportar:** Usa el menú de configuración para generar una copia de seguridad.  
-**Restaurar:** Se puede importar una copia previa desde almacenamiento externo.
-
-**Más detalles en la documentación:**  
-[NotesRoomDatabase](../generated/dokka/markdown/-app-notas/com.example.appnotas.database/-notes-room-database/index.md)
+**Notas en papelera:** Restaurar o eliminar definitivamente a los 7 días.  
+**Adjuntar imágenes:** Habilitar permisos de acceso a galería durante el primer acceso a la app, o en ajustes del dispositivo.
 
 ---
 
@@ -51,13 +35,19 @@ Este manual describe la configuración y administración de **AppNotas**, incluy
 
 **Fallos de seguridad**  
 **Causa:** La protección de notas no está habilitada.  
-**Solución:** Activa autenticación en **Ajustes > Seguridad**.
+**Solución:** Activa los FLAGS en el código.
 
 ---
 
-## Otros recursos
+## Otros manuales disponibles
 [Manual de Usuario](../generated/manual/Manual_de_usuario.md)  
 [Manual de Instalación](../generated/manual/Manual_de_instalacion.md)
+
+
+**Más información técnica:**  
+[NotesRepository](../generated/dokka/markdown/-app-notas/com.example.appnotas.database/-notes-repository/index.md)  
+[NotesRoomDatabase](../generated/dokka/markdown/-app-notas/com.example.appnotas.database/-notes-room-database/index.md)
+
 
 **Este manual se actualiza automáticamente con Dokka al ejecutar:**  
 ```bash

@@ -153,7 +153,7 @@ class AllNotesFragment : Fragment() {
             adapter.submitList(notes)
         }
 
-        // Configurar el botón de nueva nota
+        // Botón de nueva nota
         binding.newNoteFAB.setOnClickListener {
             Navigation.findNavController(view)
                 .navigate(R.id.action_allNotesFragment_to_editNoteFragment)
@@ -190,7 +190,6 @@ class AllNotesFragment : Fragment() {
                     }.show()
             }
         }
-
         ItemTouchHelper(callback).attachToRecyclerView(binding.noteRecycler)
     }
 
@@ -220,5 +219,4 @@ class AllNotesFragment : Fragment() {
             else -> super.onOptionsItemSelected(item)
         }
     }
-
 }

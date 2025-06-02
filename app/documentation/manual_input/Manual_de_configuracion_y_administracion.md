@@ -22,12 +22,8 @@ Este manual describe la configuración y administración de **AppNotas**, incluy
 
 ## Gestión de Notas
 
-**Notas en papelera:** Restaurar o eliminar definitivamente.  
-**Adjuntar imágenes:** Habilitar permisos de acceso a galería en ajustes.
-
-**Más detalles en la documentación:**  
-[NotesRepository](../generated/dokka/markdown/-app-notas/com.example.appnotas.database/-notes-repository/index.md)
-[NotesRoomDatabase](../generated/dokka/markdown/-app-notas/com.example.appnotas.database/-notes-room-database/index.md)
+**Notas en papelera:** Restaurar o eliminar definitivamente a los 7 días.  
+**Adjuntar imágenes:** Habilitar permisos de acceso a galería durante el primer acceso a la app, o en ajustes del dispositivo.
 
 ---
 
@@ -43,9 +39,15 @@ Este manual describe la configuración y administración de **AppNotas**, incluy
 
 ---
 
-## Otros recursos
+## Otros manuales disponibles
 [Manual de Usuario](../generated/manual/Manual_de_usuario.md)  
 [Manual de Instalación](../generated/manual/Manual_de_instalacion.md)
+
+
+**Más información técnica:**  
+[NotesRepository](../generated/dokka/markdown/-app-notas/com.example.appnotas.database/-notes-repository/index.md)  
+[NotesRoomDatabase](../generated/dokka/markdown/-app-notas/com.example.appnotas.database/-notes-room-database/index.md)
+
 
 **Este manual se actualiza automáticamente con Dokka al ejecutar:**  
 ```bash

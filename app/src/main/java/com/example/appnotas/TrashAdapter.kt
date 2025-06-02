@@ -46,7 +46,7 @@ class TrashAdapter(
             binding.root.setOnCreateContextMenuListener(this)
             binding.root.setOnLongClickListener {
                 currentPosition = adapterPosition
-                false // Devolver false para permitir que el menú contextual se muestre
+                false // Devolver false
             }
         }
 

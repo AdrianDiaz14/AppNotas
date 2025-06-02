@@ -24,7 +24,6 @@ object NotesDaoSamples {
      * @sample com.sba.notes.samples.NotesDaoSamples.insertNoteSample
      */
     fun insertNoteSample(context: Context) = runBlocking {
-        // Crea una base de datos in-memory para el ejemplo
         val db = Room.inMemoryDatabaseBuilder(context, NotesRoomDatabase::class.java).build()
         val dao: NotesDao = db.notesDao()
 

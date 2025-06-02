@@ -163,12 +163,9 @@ class NotesAdapter : ListAdapter<Notes, NotesAdapter.NotesViewHolder>(NotesDiffC
             binding.noteDesc.text = note.description
             binding.noteTitle.visibility = if (note.title.isBlank()) View.GONE else View.VISIBLE
 
-            // Mantener el color original del fondo
             binding.noteConstrainLayout.setCardBackgroundColor(
                 ContextCompat.getColor(binding.root.context, R.color.primaryLight)
             )
-
-            // Modificar solo el color del borde si está seleccionado
             if (selectedItems.contains(bindingAdapterPosition)) {
                 binding.noteConstrainLayout.strokeColor =
                     ContextCompat.getColor(binding.root.context, R.color.green)

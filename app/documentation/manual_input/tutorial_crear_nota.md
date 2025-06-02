@@ -14,9 +14,10 @@
 3. Presiona el botón **✔** para guardar.
     - La nota se guardará automáticamente y volverás a la pantalla principal.
 
-![Ejemplo de nota creada](https://i.imgur.com/YHXECra.png)
+![Ejemplo de nota creada](https://i.imgur.com/CVAHv8L.png)
 
 > 💡 **Consejo**: Puedes deslizar una nota hacia los lados en la pantalla principal para moverla a la papelera.
 
 > **Más detalles técnicos:**  
-[NotesRepository](../generated/dokka/markdown/-app-notas/com.example.appnotas.database/-notes-view-model/insert-note.md)  
+[Método para insertar la nota](../generated/dokka/markdown/-app-notas/com.example.appnotas.database/-notes-view-model/insert-note.md)  
+[Clase Notes](../generated/dokka/markdown/-app-notas/com.example.appnotas.database/-notes/index.md)

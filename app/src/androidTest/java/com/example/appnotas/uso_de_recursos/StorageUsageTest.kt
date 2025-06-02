@@ -36,7 +36,6 @@ class StorageUsageTest {
         fakeNotesDao = FakeNotesDao()
         context = InstrumentationRegistry.getInstrumentation().targetContext
 
-        // Limpiar archivos de pruebas anteriores
         cleanUpTestFiles()
     }
 

@@ -40,6 +40,6 @@ data class Notes(
     var title: String,
     var description: String,
     var imageUris: List<String>? = null,
-    var isDeleted: Boolean = false, // Nuevo campo para marcar como eliminado
-    var deletionDate: Long? = null // Fecha cuando fue eliminada
+    var isDeleted: Boolean = false,
+    var deletionDate: Long? = null
 ) : Serializable

@@ -16,7 +16,6 @@ import com.example.appnotas.getOrAwaitValue
  * @property realRepository El repositorio real que será utilizado para las operaciones
  */
 class FakeNotesRepository(private val realRepository: NotesRepository) {
-    // Delegamos todas las propiedades/métodos al repositorio real
     val allNotes: LiveData<List<Notes>> get() = realRepository.allNotes
     val deletedNotes: LiveData<List<Notes>> get() = realRepository.deletedNotes
 
@@ -57,7 +56,6 @@ class FakeNotesRepository(private val realRepository: NotesRepository) {
      * @throws IllegalStateException si la nota no se encuentra en la papelera
      */
     suspend fun restoreNote(noteId: Long) {
-        // Esperar a que los datos estén disponibles
         val noteExists = try {
             realRepository.deletedNotes.getOrAwaitValue()
                 .any { it.noteId == noteId }

@@ -174,10 +174,9 @@ class ImageDialogFragment : DialogFragment() {
             setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
             setDimAmount(0.8f)
 
-            // Reemplazo de systemUiVisibility con WindowInsetsController
             insetsController?.apply {
-                hide(WindowInsets.Type.systemBars()) // Oculta barras de navegación y estado
-                systemBarsBehavior = WindowInsetsController.BEHAVIOR_DEFAULT // Muestra al deslizar
+                hide(WindowInsets.Type.systemBars())
+                systemBarsBehavior = WindowInsetsController.BEHAVIOR_DEFAULT
             }
         }
     }

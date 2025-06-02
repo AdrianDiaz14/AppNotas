@@ -1,5 +1,5 @@
 # Manual de Usuario - AppNotas
-**Última actualización:** 01/06/2025 12:47
+**Última actualización:** 02/06/2025 23:34
 
 ---
 
@@ -8,7 +8,7 @@
 2️⃣ [Creación de Notas](#creación-de-notas)  
 3️⃣ [Gestión de Notas](#gestión-de-notas)  
 4️⃣ [Restaurar Notas](#restaurar-notas)  
-5️⃣ [Ayuda Contextual](#ayuda-contextual)
+5️⃣ [Ayuda Contextual](#ayuda-contextual) 
 
 ---
 
@@ -20,70 +20,71 @@ Bienvenido a **AppNotas**, tu aplicación para gestionar notas. Con esta herrami
 - Adjuntar imágenes
 - Restaurar notas eliminadas
 
-**Más información en la documentación técnica:**
-- [ViewModel de Notas](documentation/generated/dokka/markdown/-app-notas/com.example.appnotas.database/-notes-view-model/index.md)
-- [Gestor de Ayuda](documentation/generated/dokka/markdown/-app-notas/com.example.appnotas.helpers/-help-manager/index.md)
-
 ---
 
 ## Creación de Notas
 
 ### 1️⃣ **Abrir el editor de notas**
-Para crear una nueva nota:  
-Pulsa el botón `+` en la pantalla principal
+Pulsa el botón `+` para crear una nueva nota
 
 ### 2️⃣ **Escribir y adjuntar contenido**
 **Opciones disponibles:**
-- Escribe un título y descripción
-- Añade imágenes tocando **Añadir imagen**
+- Escribe contenido
+- Adjunta imágenes
 
 ### 3️⃣ **Guardar la nota**
 Pulsa el botón **Guardar** para almacenar tu nota.
 
-**Más información técnica:**  
-🔍 [ViewModel para guardar notas](documentation/generated/dokka/markdown/-app-notas/com.example.appnotas.database/-note-save-view-model/index.md)
+[Guía completa para crear una nota](tutorial_crear_nota.md)
 
 ---
 
 ## Gestión de Notas
 
 ### **Editar una nota existente**
-1️⃣ Selecciona la nota en la pantalla principal  
-2️⃣ Realiza los cambios necesarios  
-3️⃣ Guarda la nota con el botón **Guardar**
-4️⃣ Podrás ver la fecha y hora de la última modificación
+1️⃣ Selecciona la nota en la pantalla principal para abrir la edición  
+2️⃣ Realiza los cambios necesarios   
+3️⃣ Guarda la nota con el botón guardar **✔**  
+4️⃣ Podrás ver la fecha y hora de la última modificación  
 
 ### **Eliminar una nota**
-Mantén pulsada la nota y selecciona **Eliminar**  
-La nota se moverá a la Papelera  
-La nota permanecerá 7 días en la papelera, a modo de seguridad, hasta que se autoelimine.
+**Opciones disponibles:**
+- Mantén pulsada la nota y selecciona el cubo para **Eliminar**
+- Desliza una nota hacia la derecha
 
-**Más detalles técnicos:**  
-[Repositorio de notas](documentation/generated/dokka/markdown/-app-notas/com.example.appnotas.database/-notes-repository/index.md)
+La nota se moverá a la Papelera, donde permanecerá 7 días a modo de seguridad, hasta que se autoelimine.
+
+[Guía paso a paso para eliminar una nota](tutorial_borrar_nota.md)
 
 ---
 
 ## Restaurar Notas
 
 1️⃣ Accede a la sección **Papelera**  
-2️⃣ Selecciona la nota eliminada, o pulsa el botón correspondiente
-3️⃣ Pulsa en **Recuperar**
+2️⃣ Mantén pulsada la nota eliminada, o pulsa el botón **Restaurar** directamente
 
-**Restauración automática:**  
+**Eliminación automática:**  
 Las notas eliminadas **por más de 7 días** serán **borradas permanentemente**.
 
-**Más detalles en la documentación:**  
-[Método restoreNote](documentation/generated/dokka/markdown/-app-notas/com.example.appnotas.database/-notes-repository/restore-note.md)
+[Tutorial para recuperar notas eliminadas](tutorial_recuperar_nota.md)
 
 ---
 
-## (!) Ayuda Contextual
+## Ayuda Contextual
 
 AppNotas ofrece asistencia contextual según el uso. Si tienes dudas, busca el ícono **!** de Ayuda en la interfaz.
 
 ## Otros manuales disponibles
 [Manual de Instalación](../generated/manual/Manual_de_instalacion.md)  
-[Manual de Configuración](../generated/manual/Manual_de_configuracion_y_administracion.md)
+[Manual de Configuración y Administración](../generated/manual/Manual_de_configuracion_y_administracion.md)
+
+**Más información técnica:**
+- [Clase Notes](../generated/dokka/markdown/-app-notas/com.example.appnotas.database/-notes/index.md)
+- [ViewModel de Notas](../generated/dokka/markdown/-app-notas/com.example.appnotas.database/-notes-view-model/index.md)
+- [Gestor de Ayuda](../generated/dokka/markdown/-app-notas/com.example.appnotas.helpers/-help-manager/index.md)
+- [ViewModel para guardar notas](../generated/dokka/markdown/-app-notas/com.example.appnotas.database/-note-save-view-model/index.md)
+- [Repositorio de notas](../generated/dokka/markdown/-app-notas/com.example.appnotas.database/-notes-repository/index.md)
+- [Método restoreNote](../generated/dokka/markdown/-app-notas/com.example.appnotas.database/-notes-repository/restore-note.md)
 
 **Este manual se actualiza automáticamente con Dokka al ejecutar:**
 ```bash

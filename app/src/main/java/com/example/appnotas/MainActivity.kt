@@ -126,7 +126,7 @@ class MainActivity : AppCompatActivity() {
         val headerView = navView.getHeaderView(0)
         val spinner = headerView.findViewById<Spinner>(R.id.spinner)
 
-        val spinnerItems = listOf("Listado Notas 1", "Listado Notas 2", "Listado Notas 3")
+        val spinnerItems = listOf("Listado Notas 1")
         val adapter = ArrayAdapter(
             this,
             android.R.layout.simple_spinner_item,
@@ -223,13 +223,10 @@ class MainActivity : AppCompatActivity() {
         try {
             // Simular permiso denegado
             Toast.makeText(this, "Permiso denegado", Toast.LENGTH_LONG).apply {
-                // Forzar mostrar el Toast inmediatamente
                 show()
             }
         } catch (e: Exception) {
             e.printStackTrace()
         }
     }
-
-
 }
