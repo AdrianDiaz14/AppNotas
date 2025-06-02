@@ -18,8 +18,8 @@
 > **Nota**: Las notas en la papelera se eliminan permanentemente después de 7 días.
 
 > **Más detalles técnicos:**  
-[Método para eliminar la nota](../generated/dokka/markdown/-app-notas/com.example.appnotas.database/-notes-view-model/soft-delete-note.md)  
-[Clase Notes](../generated/dokka/markdown/-app-notas/com.example.appnotas.database/-notes/index.md)
+[Método para eliminar la nota](../dokka/markdown/-app-notas/com.example.appnotas.database/-notes-view-model/soft-delete-note.md)  
+[Clase Notes](../dokka/markdown/-app-notas/com.example.appnotas.database/-notes/index.md)
 
 
 ---
