@@ -25,9 +25,9 @@ Explora nuestra documentación completa para sacarle el máximo provecho a AppNo
 
 | Manual | Contenido | Acceso Directo                                                                               |
 |--------|-----------|----------------------------------------------------------------------------------------------|
-| 📘 **Manual de Usuario** | Todas las funcionalidades básicas y avanzadas | [Ver manual](app/documentation/generated/manual/Manual_de_usuario.md)                        |
-| 🔧 **Manual de Instalación** | Guía paso a paso para configurar la app | [Ver manual](app/documentation/generated/manual/Manual_de_instalacion.md)                    |
-| ⚙️ **Manual de Configuración** | Ajustes de seguridad y administración | [Ver manual](app/documentation/generated/manual/Manual_de_configuracion_y_administracion.md) |
+| 📘 **Manual de Usuario** | Todas las funcionalidades básicas y avanzadas | [Ver manual](documentation/generated/manual/Manual_de_usuario.md)                        |
+| 🔧 **Manual de Instalación** | Guía paso a paso para configurar la app | [Ver manual](documentation/generated/manual/Manual_de_instalacion.md)                    |
+| ⚙️ **Manual de Configuración** | Ajustes de seguridad y administración | [Ver manual](documentation/generated/manual/Manual_de_configuracion_y_administracion.md) |
 
 *El manual de usuario contiene los correspondientes tutoriales.*
 
