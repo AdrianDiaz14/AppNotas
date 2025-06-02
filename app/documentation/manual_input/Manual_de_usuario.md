@@ -75,16 +75,16 @@ Las notas eliminadas **por más de 7 días** serán **borradas permanentemente**
 AppNotas ofrece asistencia contextual según el uso. Si tienes dudas, busca el ícono **!** de Ayuda en la interfaz.
 
 ## Otros manuales disponibles
-[Manual de Instalación](../generated/manual/Manual_de_instalacion.md)  
-[Manual de Configuración y Administración](../generated/manual/Manual_de_configuracion_y_administracion.md)
+[Manual de Instalación](../manual/Manual_de_instalacion.md)  
+[Manual de Configuración y Administración](../manual/Manual_de_configuracion_y_administracion.md)
 
 **Más información técnica:**
-- [Clase Notes](../generated/dokka/markdown/-app-notas/com.example.appnotas.database/-notes/index.md)
-- [ViewModel de Notas](../generated/dokka/markdown/-app-notas/com.example.appnotas.database/-notes-view-model/index.md)
-- [Gestor de Ayuda](../generated/dokka/markdown/-app-notas/com.example.appnotas.helpers/-help-manager/index.md)
-- [ViewModel para guardar notas](../generated/dokka/markdown/-app-notas/com.example.appnotas.database/-note-save-view-model/index.md)
-- [Repositorio de notas](../generated/dokka/markdown/-app-notas/com.example.appnotas.database/-notes-repository/index.md)
-- [Método restoreNote](../generated/dokka/markdown/-app-notas/com.example.appnotas.database/-notes-repository/restore-note.md)
+- [Clase Notes](../dokka/markdown/-app-notas/com.example.appnotas.database/-notes/index.md)
+- [ViewModel de Notas](../dokka/markdown/-app-notas/com.example.appnotas.database/-notes-view-model/index.md)
+- [Gestor de Ayuda](../dokka/markdown/-app-notas/com.example.appnotas.helpers/-help-manager/index.md)
+- [ViewModel para guardar notas](../dokka/markdown/-app-notas/com.example.appnotas.database/-note-save-view-model/index.md)
+- [Repositorio de notas](../dokka/markdown/-app-notas/com.example.appnotas.database/-notes-repository/index.md)
+- [Método restoreNote](../dokka/markdown/-app-notas/com.example.appnotas.database/-notes-repository/restore-note.md)
 
 **Este manual se actualiza automáticamente con Dokka al ejecutar:**
 ```bash
