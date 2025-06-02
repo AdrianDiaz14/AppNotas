@@ -46,9 +46,9 @@ Explora nuestra documentación completa para sacarle el máximo provecho a AppNo
 
 ## 📂 Estructura de la Información Persistente
 
-[![Ver Estructura de Datos](https://img.shields.io/badge/ESTRUCTURA_DE_DATOS-5A5A5A?style=for-the-badge&logo=databricks)](app/informacion_persistente.md)
+[![Ver Estructura de Datos](https://img.shields.io/badge/ESTRUCTURA_DE_DATOS-5A5A5A?style=for-the-badge&logo=databricks)](informacion_persistente.md)
 
 ## 📊 Informe Técnico Completo de Pruebas
 
-[![Ver Informe en GitHub](https://img.shields.io/badge/VER_INFORME-TESTING-2EA043?style=for-the-badge&logo=github)](app/informe_de_pruebas.md)  
+[![Ver Informe en GitHub](https://img.shields.io/badge/VER_INFORME-TESTING-2EA043?style=for-the-badge&logo=github)](informe_de_pruebas.md)  
 [![Descargar PDF](https://img.shields.io/badge/Descargar_PDF-EC1C24?style=for-the-badge&logo=adobe-acrobat-reader)](https://drive.google.com/file/d/178K7pm5PvxX-pPUb3QiAm7_euy7UQo_E/view?usp=sharing)
