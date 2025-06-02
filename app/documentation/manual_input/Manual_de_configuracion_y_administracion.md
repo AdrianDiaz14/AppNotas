@@ -40,8 +40,8 @@ Este manual describe la configuración y administración de **AppNotas**, incluy
 ---
 
 ## Otros manuales disponibles
-[Manual de Usuario](../generated/manual/Manual_de_usuario.md)  
-[Manual de Instalación](../generated/manual/Manual_de_instalacion.md)
+[Manual de Usuario](../manual/Manual_de_usuario.md)  
+[Manual de Instalación](../manual/Manual_de_instalacion.md)
 
 
 **Más información técnica:**  
