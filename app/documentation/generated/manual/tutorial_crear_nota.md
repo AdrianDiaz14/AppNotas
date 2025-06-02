@@ -19,8 +19,8 @@
 > 💡 **Consejo**: Puedes deslizar una nota hacia los lados en la pantalla principal para moverla a la papelera.
 
 > **Más detalles técnicos:**  
-[Método para insertar la nota](../generated/dokka/markdown/-app-notas/com.example.appnotas.database/-notes-view-model/insert-note.md)  
-[Clase Notes](../generated/dokka/markdown/-app-notas/com.example.appnotas.database/-notes/index.md)
+[Método para insertar la nota](../dokka/markdown/-app-notas/com.example.appnotas.database/-notes-view-model/insert-note.md)  
+[Clase Notes](../dokka/markdown/-app-notas/com.example.appnotas.database/-notes/index.md)
 
 
 ---
