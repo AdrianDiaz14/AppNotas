@@ -60,11 +60,11 @@ git clone https://github.com/AdrianDiaz14/AppNotas.git
 ./gradlew build
 `
 
-**Revisar:** [NotesRepository](../generated/dokka/markdown/-app-notas/com.example.appnotas.database/-notes-repository/index.md).
+**Revisar:** [NotesRepository](../dokka/markdown/-app-notas/com.example.appnotas.database/-notes-repository/index.md).
 
 ### 4️⃣ **Generar documentación automática con Dokka**
 `bash
-./gradlew dokkaMarkdown
+./gradlew generateManuals
 `
 
 ---
