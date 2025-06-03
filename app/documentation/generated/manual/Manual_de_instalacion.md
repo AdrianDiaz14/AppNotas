@@ -82,8 +82,8 @@ git clone https://github.com/AdrianDiaz14/AppNotas.git
 ---
 
 ## Otros manuales disponibles
-[Manual de Usuario](../generated/manual/Manual_de_usuario.md)  
-[Manual de Configuración y Administración](../generated/manual/Manual_de_configuracion_y_administracion.md)
+[Manual de Usuario](../manual/Manual_de_usuario.md)  
+[Manual de Configuración y Administración](../manual/Manual_de_configuracion_y_administracion.md)
 
 **Más información técnica:**
 - La aplicación debe iniciarse correctamente con [NotesViewModel](../dokka/markdown/-app-notas/com.example.appnotas.database/-notes-view-model/index.md).
