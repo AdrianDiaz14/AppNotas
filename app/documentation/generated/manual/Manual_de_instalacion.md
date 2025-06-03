@@ -87,7 +87,7 @@ git clone https://github.com/AdrianDiaz14/AppNotas.git
 
 **Más información técnica:**
 - La aplicación debe iniciarse correctamente con [NotesViewModel](../dokka/markdown/-app-notas/com.example.appnotas.database/-notes-view-model/index.md).
-- [Actividad principal](dokka/markdown/-app-notas/com.example.appnotas/-main-activity/index.md)  
+- [Actividad principal](../dokka/markdown/-app-notas/com.example.appnotas/-main-activity/index.md)  
 
 **Este manual se actualiza automáticamente con Dokka al ejecutar:**  
 ```bash
